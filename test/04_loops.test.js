@@ -2,7 +2,7 @@
 let {numbers, eachAddOne, onlyEven} = require('../04_loop.js')
 
 test('numbers', () => {
-  expect(numbers).toEqual([5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15])
+  expect(numbers).toEqual([5, 7, 9, 11, 13, 15])
 })
 
 test('eachAddOne', () => {
