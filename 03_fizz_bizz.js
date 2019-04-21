@@ -6,26 +6,46 @@
 // 例如   [1, 2, 3, 4, 5]
 // 會回傳 [1, 2, Fizz, 4, Buzz]
 
-function fizzBuzz(input) {
-  let result = '';
-  for(let i = 1 ; i <= input ; i++ ){
-    if (i > 1){
-      result += ' ';
-    }
+// function fizzBuzz(input) {
+//   let result = '';
+//   for(let i = 1 ; i <= input ; i++ ){
+//     if (i > 1){
+//       result += ' ';
+//     }
+//     if(i % 3 === 0 && i % 5 === 0){
+//       result += 'FizzBuzz';
+//     }
+//     else if(i % 5 === 0 ){
+//       result += 'Buzz';
+//     }
+//     else if(i % 3 === 0 ){
+//       result += 'Fizz';
+//     }
+//     else{
+//       result += i ;
+//     }
+//   }
+//   return result;
+// }
+
+//use
+function fizzBuzz(input){
+  let texts = [];
+  for(let i = 1 ; i<=input ; i++){
     if(i % 3 === 0 && i % 5 === 0){
-      result += 'FizzBuzz';
+      texts[i-1] = 'FizzBuzz';
     }
     else if(i % 5 === 0 ){
-      result += 'Buzz';
+      texts[i-1] = 'Buzz';
     }
     else if(i % 3 === 0 ){
-      result += 'Fizz';
+      texts[i-1] = 'Fizz';
     }
     else{
-      result += i ;
+      texts[i-1] = i ;
     }
   }
-  return result;
+  return texts.join(' ');
 }
 
 module.exports = {fizzBuzz};
